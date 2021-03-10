@@ -26,6 +26,11 @@ services:
       - 'moodledata_data:/bitnami/moodledata'
     depends_on:
       - mariadb
+  jobe:
+    image: 'trampgeek/jobeinabox'
+    ports:
+      - '4000:80'
+
 volumes:
   mariadb_data:
     driver: local
